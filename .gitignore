@@ -1,3 +1,6 @@
+ignored_files/
 img/
-capstone-ideas.txt
-project-capstone.txt
+SecretLibraryFastAPI/venv
+SecretLibraryFastAPI/__pycache__/
+SecretLibraryFastAPI/models/__pycache__/
+SecretLibraryFastAPI/routes/__pycache__/
