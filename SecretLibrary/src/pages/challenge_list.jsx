@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-import ChallengeContent from './challenge_content';
+import ChallengeItem from './challege_item'
 
 export default class ChallengesList extends Component {
     constructor(){
@@ -16,9 +15,9 @@ export default class ChallengesList extends Component {
     }
 
     getChallenges(){
-      axios.get('http://localhost:8000/challenges')
+      axios.get('http://127.0.0.1:8000/challenges')
       .then(response => {
-         console.log(response);
+         //console.log(response);
          this.setState({
             data: response.data
         })
@@ -31,11 +30,7 @@ export default class ChallengesList extends Component {
 
     challenges() {
       return this.state.data.map(item => {
-         return <div key={item.challenges_id}>
-            <Link to={`/challenges/${item.challenges_id}`}><div className='challenge_title'>{item.challenges_name}</div></Link>
-            <div className='challenge_description'>{item.challenges_description}</div> 
-         </div>
-         // return <ChallengeContent key={item.challenges_id} item={item} />
+         return <ChallengeItem key={item.challenges_id} challengeItem={item} />
       })
     }
 
@@ -44,10 +39,12 @@ export default class ChallengesList extends Component {
     }
    render(){
        return (
-          <div>
+          <div className='challenges_list_container'>
             {/* <div><a href={this.state.data.}>{this.state.data.challenges_name}</a></div>
             <p></p> */}
             {this.challenges()}
+            <p className='challenge_title'>Titulo</p>
+            <p>Prueba CSS</p>
           </div>
        );
    }

@@ -31,3 +31,22 @@ challengeContent
 <li><span class=f"completed_{prompts_completed}">{prompts_content}</span> : <span>{prompts_completed_book}</span>
 </ol>
 </div>
+
+
+
+
+Variables:
+//{"Beige":"f2f3d9","Wisteria":"b4a0e5","Phlox":"ca3cff","Indigo":"540d6e","Dark purple":"361d2e"}
+
+$azul: RGB(37, 31, 84);
+$lavanda: RGB(209, 200, 255);
+$dark-purple: RGB(111, 17, 244);
+$light-purple: RGB(172, 48, 241)
+
+//Text color: RGB(37, 31, 84) Azul osucro
+//Background color: RGB(209, 200, 255) Lavanda
+//Additional color(s): RGB(111, 17, 244) Lila potente, RGB(172, 48, 241) Lila suave
+
+//Text color: RGB(232, 233, 240) azul oscuro
+//Background color: RGB(48, 48, 75) gris
+//Additional color(s): RGB(194, 87, 225) lila, RGB(148, 159, 224) lavanda gris

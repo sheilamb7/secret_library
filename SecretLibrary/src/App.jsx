@@ -1,7 +1,7 @@
 import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import './App.css'
+import './App.scss'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,8 +12,6 @@ import NoMatch from './pages/no-match';
 import ChallengeContent from './pages/challenge_content';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   const router = createBrowserRouter([
     {
       path: "/",
@@ -21,9 +19,10 @@ function App() {
       errorElement: <NoMatch />
     },
     {
-      path: "/challenges/:challenges_name",
+      path: "/challenges/:challenges_id",
       element: <ChallengeContent />
     }
+    //<Route path="/weather/:id" render={ ({match}) => <Home id={match.params.id}/> } /> //This is the rout
   ]);
 
   return (
@@ -46,4 +45,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
