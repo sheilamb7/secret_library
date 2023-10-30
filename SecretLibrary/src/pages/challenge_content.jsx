@@ -22,7 +22,7 @@ const ChallengeContent = (props) => {
          <div className='main_container'>
             <Header />
             <div className='challenges_content'>
-               <h2>~{challenges_name}~</h2>
+               <h2>{challenges_name}</h2>
                <PromptsList challenge_id={challenges_id}/>
             </div>
             
